@@ -1,12 +1,14 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{basileabeam}
+\usepackage{epigraph}
+\usepackage{graphicx}
 
 %notes
 %\pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
 %\setbeamertemplate{note page}[plain]
 %\setbeameroption{show notes on second screen=bottom}
 
-\title              {Análise dos modos e efeitos de falhas}
+\title              {Análise dos modos, efeitos e criticidade de falhas}
 \author             {Marco Reis}
 \email              {marcoreis@me.com}
 \institute          {Laboratório de Robótica e Sistemas Autônomos, Senai Cimatec}
@@ -27,27 +29,69 @@
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
 %*----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Introdução} 
+\begin{frame}[t]{Introdução} 
 %! esta figura tem que sair daqui
+A técnica é conhecida como FMECA (\textit{Failure Mode and Effect Criticality Analysis}).
+
+A análise dos modos de falhas, efeitos e criticidade é uma técnica que oferece três funções distintas:
+\newline
     \begin{columns}[c]
-        \column{.55\textwidth}
-            \includegraphics[width=0.8\textwidth]{block}
-        \column{.45\textwidth}
-            Turing machine
+        \column{.05\textwidth}
+        \column{.6\textwidth}
+            \begin{enumerate}
+                \item ferramenta para prognóstico de problemas
+                \item procedimento para desenvolvimento e execução de projetos, processos ou serviços (novos ou revisados)
+                \item diário do projeto, processo ou serviço
+            \end{enumerate}
+        \column{.35\textwidth}
+            \includegraphics[width=.9\textwidth]{fmeca}
     \end{columns}
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
-\begin{frame}[c]{Some Images}
-    \begin{figure}
-        \includegraphics[width=0.8\textwidth]{turingmachine}
-        \caption{A Turing Machine.}
-    \end{figure}
+%*----------- SLIDE ------------------------------------------------------------
+\begin{frame}[t]{FMECA}
+    A elaboração da FMECA é muito eficaz quando elaborado em equipe.
+
+    É um método sistemático para identificar e prevenir problemas potenciais.
+
+    Inicialmente, é importante detalhar o sistema em análise apontando os seus subsistemas e componentes.
+    
+    \setlength\epigraphwidth{.7\textwidth}
+    \epigraph{Uma pessoa fazendo o seu melhor, não consegue ser tão eficiente quanto uma equipe trabalhando em conjunto.}{\textit{Marco Reis}}
+
+    \includegraphics[width=1\textwidth, trim={0 1.8cm 0 0},clip]{tools}
+    \raggedleft
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
+%*----------- SLIDE ------------------------------------------------------------
+\begin{frame}[t]{Duas Perguntas}
+    Quando o foco é o desenvolvimento de um projeto, duas perguntas diretivas devem ser realizadas.
+    \newline
+    \begin{itemize}
+        \item Como esse projeto pode deixar de fazer o que deve fazer?
+        \item O que devemos fazer para prevenir essas falhas potenciais de projeto?
+    \end{itemize}
+    \hfill
+
+    Principais objetivos de uma FMECA:
+    \newline
+    \begin{columns}[t]
+        \column{.45\textwidth}
+            detalhar sistemas em subconjuntos\\
+            listar possíveis modos de falhas\\
+            analisar cada modo de falha, juntamente com suas possíveis causas e sintomas
+        \column{.45\textwidth}
+            estimar os efeitos de cada modo de falhas\\
+            estimar a criticidade de cada efeito\\
+            identificar ações para minimizar falhas
+    \end{columns}
+\end{frame}
+
+%-
+\note{Notes can help you to remember important information. Turn on the notes option.}
+%*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[c]{Some Equations}
 Now we introduce an equation.
     \begin{theorem}
@@ -61,7 +105,7 @@ A Turing Machine is a 7-Tuple even if defined in the text, as in $M = \langle Q,
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
+%*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[t]{Items and Numbers}
     \begin{columns}
         \column{.5\textwidth}
@@ -80,7 +124,7 @@ A Turing Machine is a 7-Tuple even if defined in the text, as in $M = \langle Q,
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
+%*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[c]{Tables}
 Tables are also interesting.
     \begin{table}[ht!]
@@ -95,7 +139,7 @@ Tables are also interesting.
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%----------- SLIDE ------------------------------------------------------------
+%*----------- SLIDE ------------------------------------------------------------
 \begin{frame}[c]{Speaker Notes}
 You may turn on the notes and handout option to see the notes to the slides.
 \end{frame}
@@ -111,12 +155,12 @@ Test
 \note{Notes can help you to remember important information. Turn on the notes option.}
 
 \backupend
-%----------- QUESTIONS --------------------------------------------------------
+%*----------- QUESTIONS --------------------------------------------------------
 \begin{frame}[t,plain]
 \lastpage{{\usebeamerfont{title} Questions?}\\[3ex] \hspace{0.1cm} marcoreis@me.com}
 \end{frame}
 %-
 \note{Notes can help you to remember important information. Turn on the notes option.}
-%------------------------------------------------------------------------------
+%*--------------------------------------------------------------------- END-----
 \end{document}
 
